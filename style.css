@@ -33,13 +33,15 @@ select {
 
 :root {
   /* primary */
-  --dark-violet: hsla(300, 43%, 20);
+  --cyan: hsla(177, 68%, 64%, 1);
+  --red: hsla(12, 94%, 65%, 1);
+  -orange: hsla(33, 100%, 70%, 1);
+  --white: hsla(20, 33%, 98%, 1);
+  --black: hsla(244, 23%, 12%, 1);
 }
 
 body {
   display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 100vh;
   line-height: 1.3;
   text-rendering: optimizeSpeed;
