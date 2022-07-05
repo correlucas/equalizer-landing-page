@@ -33,9 +33,9 @@ select {
 
 :root {
   /* primary */
-  --cyan: hsla(177, 68%, 64%, 1);
+  --cyan: hsl(177, 68%, 64%);
   --red: hsla(12, 94%, 65%, 1);
-  -orange: hsla(33, 100%, 70%, 1);
+  --orange: hsla(33, 100%, 70%, 1);
   --white: hsla(20, 33%, 98%, 1);
   --black: hsla(244, 23%, 12%, 1);
 }
@@ -48,8 +48,14 @@ body {
   text-rendering: optimizeSpeed;
   font-family: 'IBM Plex Sans',
     sans-serif;
-  background: url(./assets/bg-main-desktop.png), url(./assets/bg-pattern-1.svg) no-repeat top -368px left -254px, right top -40px;
+  background-image: url(./assets/bg-main-desktop.png),
+    url(./assets/bg-pattern-1.svg);
   background-repeat: no-repeat;
+  background-size: auto, 350px;
+  background-position: top -368px left -254px, right top -40px;
+  background-size: auto, 300px;
+  background-position: top -368px left -254px,
+    right top -40px;
 }
 
 header {
@@ -172,6 +178,8 @@ h1 {
   gap: 10px;
   width: 95%;
   padding: 20px 15px;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 .btn-ios {
@@ -179,9 +187,17 @@ h1 {
   margin-bottom: 1.125rem;
 }
 
+.btn-ios:hover {
+  background-color: var(--cyan);
+}
+
 .btn-android {
   color: var(--black);
   background-color: var(--white);
+}
+
+.btn-android:hover {
+  background-color: var(--orange);
 }
 
 /* footer */
@@ -206,6 +222,12 @@ h1 {
 
 .footer img {
   height: 100%;
+  transition: ease-in-out 0.2s;
+}
+
+.footer img:hover {
+  filter: invert(55%) sepia(62%) saturate(1642%) hue-rotate(327deg) brightness(103%) contrast(96%);
+  transition: ease-in-out 0.2s;
 }
 
 .social-icon {
