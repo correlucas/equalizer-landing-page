@@ -85,18 +85,18 @@ h1,
 }
 
 .gradient-text {
-  background-image: linear-gradient(90deg, #66E2DC 4.3%, #FA7453 34.66%, #ffb29b 71.18%, #66E2DC 100%);
+  background-image: linear-gradient(90deg, #66E2DC 0%, #FA7453 25%, #6edeff 50%, #ffbc00 75%, #66E2DC 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-size: 800%;
-  background-position: -9771px;
-  animation: animatedText 10s ease-out infinite;
+  background-size: 2000%;
+  background-position: -100%;
+  animation: animatedText 10s linear infinite;
 }
 
 @keyframes animatedText {
   to {
-    background-position: 100%;
+    background-position: 50%;
   }
 }
 
