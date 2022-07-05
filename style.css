@@ -63,6 +63,15 @@ header {
 }
 
 .logo {
+  transition: ease-in-out 0.2s;
+}
+
+.logo:hover {
+  filter: invert(55%) sepia(62%) saturate(1642%) hue-rotate(327deg) brightness(103%) contrast(96%);
+  transition: ease-in-out 0.2s;
+}
+
+.logo {
   padding: 12px 0;
 }
 
