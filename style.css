@@ -151,6 +151,7 @@ h1,
   padding: 4.125rem 3.5rem 2.75rem 3.5em;
   background-color: var(--red);
   transform: translateY(90px);
+  border-radius: 12px;
 }
 
 .card h2 {
@@ -328,7 +329,14 @@ ul {
       transform: translateX(0px);
     }
 
+    .phone {
+      transform: translate(74px, -120px);
+    }
 
+    .card {
+      z-index: 0;
+      transform: translate(-74px, 120px);
+    }
 
     .hero-p {
       font-weight: 400;
@@ -385,6 +393,10 @@ ul {
     }
   }
 
+  footer {
+    padding-top: 100px;
+  }
+
 
 
   @media (max-width: 600px) {
@@ -415,16 +427,32 @@ ul {
 
   }
 
+  @media (max-width: 580px) {
+    .br-12 {
+      border-radius: 0;
+    }
+  }
+
+
+
   @media (max-width: 480px) {
     header {
       padding-top: 1rem;
     }
 
+    .card {
+      transform: translate(0px, 0px);
+      border-radius: 0;
+    }
 
     .phone {
       width: 208.97px;
       height: 430px;
       transform: translate(0px, -100px);
+    }
+
+    footer {
+      padding: 0;
     }
 
     .hero-section h1,
@@ -463,52 +491,27 @@ ul {
   }
 
 
-
-  .card {
-    transform: initial;
-  }
-
   footer {
     margin: 1.75rem;
   }
-
-
-
-  .br-12-mobile {
-    border-radius: 12px;
-  }
-
 }
 
-
 @media (max-width: 350px) {
-  .phone {
-    transform: translate(25px, -100px);
+
+  .hero-section h1,
+  .gradient-text {
+    font-size: 2.5rem;
+    line-height: 3.2rem, ;
+    letter-spacing: -0.45px;
+    max-width: 12ch;
   }
 
-
+  .hero-p,
   .card-p {
-    max-width: initial;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
-  .btn-android,
-  .btn-ios {
-    width: 80%;
-  }
-
-  h1,
-  header,
-  .hero-section p,
-  .card {
-    margin-left: 40px;
-  }
-
-  .logo {
-    margin-left: 25px;
-  }
-
-  footer {
-    margin: 0 70px;
+  .card-pricing h3 {
+    font-size: 3rem;
   }
 }
