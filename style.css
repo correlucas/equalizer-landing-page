@@ -204,6 +204,7 @@ h1,
   padding: 20px 15px;
   transition: ease-in-out 0.2s;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .btn-ios {
@@ -242,7 +243,7 @@ footer {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
+  column-gap: 40px;
 }
 
 .contact p {
@@ -327,13 +328,7 @@ ul {
       transform: translateX(0px);
     }
 
-    .phone {
-      transform: translate(74px, -120px);
-    }
 
-    .card {
-      transform: translate(-74px, 120px);
-    }
 
     .hero-p {
       font-weight: 400;
@@ -349,7 +344,15 @@ ul {
     }
   }
 
-  @media (max-width: 700px) {
+
+  @media (max-width: 780px) {
+    body {
+      background-image: url(./assets/bg-main-desktop.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top -368px left -254px;
+    }
+
     footer {
       display: flex;
       flex-wrap: wrap;
@@ -368,18 +371,31 @@ ul {
     .contact {
       gap: 28px;
     }
+
+    .hero-section {
+      padding-top: 1.75rem;
+    }
+
+    .container .app {
+      margin: 0;
+    }
+
+    .hero-p {
+      padding-bottom: 11.25rem;
+    }
   }
 
-  .container .app {
-    margin: 0;
-  }
 
-  @media (max-width: 560px) {
-    body {
-      background-image: url(./assets/bg-main-desktop.png);
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: top -368px left -254px;
+
+  @media (max-width: 600px) {
+    .hero-p {
+      padding-bottom: 100px;
+    }
+
+    .phone {
+      width: 208.97px;
+      height: 430px;
+      transform: translate(66px, -100px);
     }
 
     .container {
@@ -387,10 +403,112 @@ ul {
     }
 
     header,
-    footer,
     .hero-section,
     .app {
       margin: 1.5rem;
     }
 
+    footer {
+      padding-bottom: 1.5rem;
+      margin: 8.75rem 1.375rem 1.375rem 1.375rem;
+    }
+
   }
+
+  @media (max-width: 480px) {
+    header {
+      padding-top: 1rem;
+    }
+
+
+    .phone {
+      width: 208.97px;
+      height: 430px;
+      transform: translate(0px, -100px);
+    }
+
+    .hero-section h1,
+    .gradient-text {
+      font-size: 3rem;
+      line-height: 3.2rem, ;
+      letter-spacing: -0.45px;
+      max-width: 12ch;
+    }
+
+    .hero-section {
+      padding-top: 1rem;
+    }
+
+    .hero-p {
+      padding-bottom: 8.75rem;
+    }
+
+    .hero-p {
+      font-size: 16px;
+      line-height: 26px;
+      max-width: 32ch;
+    }
+
+    .app {
+      justify-items: center;
+      grid-template-columns: 1fr;
+      padding: 0;
+      background: var(--black) url(./assets/bg-pattern-2.svg) no-repeat left 75% top;
+    }
+  }
+
+  .btn-android,
+  .btn-ios {
+    border-radius: 12px;
+  }
+
+
+
+  .card {
+    transform: initial;
+  }
+
+  footer {
+    margin: 1.75rem;
+  }
+
+
+
+  .br-12-mobile {
+    border-radius: 12px;
+  }
+
+}
+
+
+@media (max-width: 350px) {
+  .phone {
+    transform: translate(25px, -100px);
+  }
+
+
+  .card-p {
+    max-width: initial;
+    font-size: 0.9rem;
+  }
+
+  .btn-android,
+  .btn-ios {
+    width: 80%;
+  }
+
+  h1,
+  header,
+  .hero-section p,
+  .card {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-left: 25px;
+  }
+
+  footer {
+    margin: 0 70px;
+  }
+}
