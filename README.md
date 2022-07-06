@@ -19,7 +19,7 @@ This is a solution to the [Equalizer landing page challenge on Frontend Mentor](
 
 ### Screenshot
 
-![](./screenshot/screenshot-desktop.jpg)
+![](./screenshot/screenshot-desktop.png)
 
 ### Links
 
